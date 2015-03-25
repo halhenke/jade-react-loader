@@ -15,6 +15,10 @@
     "templates"
   ],
   "author": "Hal Henke",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/halhenke/jade-react-loader"
+  },
   "license": "MIT",
   "dependencies": {
     "react": "^0.13.1",
