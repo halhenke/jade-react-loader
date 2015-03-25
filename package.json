@@ -1,0 +1,23 @@
+{
+  "name": "jade-react-loader",
+  "version": "0.1.0",
+  "description": "Loader for Webpack, transforming Jade templates to React Javascript functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "jade",
+    "react",
+    "jsx",
+    "loader",
+    "templates"
+  ],
+  "author": "Hal Henke",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.13.1",
+    "react-jade": "^2.4.0"
+  }
+}
