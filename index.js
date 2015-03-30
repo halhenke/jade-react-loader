@@ -6,5 +6,5 @@ module.exports = function(source) {
   // TODO: opts
   var template = jade.compile(source);
   var requireString = "var React = require('react');";
-  return requireString + " module.exports = " + template.toString();
+  return requireString + "\n" + "module.exports = " + template.toString();
 };
