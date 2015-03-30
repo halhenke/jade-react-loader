@@ -5,5 +5,6 @@ module.exports = function(source) {
   this.cacheable && this.cacheable();
   // TODO: opts
   var template = jade.compile(source);
-  return "module.exports = " + template.toString();
+  var requireString = "var React = require('react');";
+  return requireString + " module.exports = " + template.toString();
 };
