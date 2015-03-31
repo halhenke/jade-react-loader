@@ -1,18 +1,24 @@
-# Jade to React JS loader for webpack
+# Jade to React JS loader for Webpack
 
 ## Usage
 
 Like any loader can be set up in a configuration file but to use in a require statement:
 
 ```javascript
+var React = require("react");
+
 var template = require("jade-react!./react/components/template.jade");
+
+var JadeComponent = React.createClass({
+    render: template
+});
 ```
 
 - you will need React loaded in the browser
-- you can then render the template on the page like so:
+- If `locals` is an object specifying the components props you can then render the template on the page like so:
 
 ```javascript
-React.render(template(locals), document.getElementById("reactivePlace"));
+React.render(React.createElement(JadeComponent, locals), document.getElementById("reactivePlace"));
 ```
 
 ## More Info
