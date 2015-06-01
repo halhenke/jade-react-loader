@@ -26,6 +26,7 @@ React.render(React.createElement(JadeComponent, locals), document.getElementById
 ```javascript
 var React = require("react");
 
+// pass options as json
 var template = require("jade-react?{locals: {}, basedir: "", pretty: true}!./react/components/template.jade");
 
 var JadeComponent = React.createClass({
