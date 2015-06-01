@@ -1,6 +1,6 @@
 var jade = require("react-jade");
 var React = require("react");
-var loaderUtils = require("loaderUtils");
+var loaderUtils = require("loader-utils");
 
 module.exports = function(source) {
   this.cacheable && this.cacheable();
