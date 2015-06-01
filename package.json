@@ -21,7 +21,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "react": "^0.13.1",
+    "loader-utils": "^0.2.9",
+    "react": "^0.13.3",
     "react-jade": "^2.4.0"
   }
 }
