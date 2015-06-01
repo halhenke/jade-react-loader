@@ -21,6 +21,18 @@ var JadeComponent = React.createClass({
 React.render(React.createElement(JadeComponent, locals), document.getElementById("reactivePlace"));
 ```
 
+- OR by passing options through the loader
+
+```javascript
+var React = require("react");
+
+var template = require("jade-react?{locals: {}, basedir: "", pretty: true}!./react/components/template.jade");
+
+var JadeComponent = React.createClass({
+    render: template
+});
+```
+
 ## More Info
 
 - Uses the [react-jade](https://github.com/jadejs/react-jade) package and Jade templates are subject to the same limitations as listed there.
