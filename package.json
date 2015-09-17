@@ -22,7 +22,19 @@
   "license": "MIT",
   "dependencies": {
     "loader-utils": "^0.2.9",
-    "react": "^0.13.3",
     "react-jade": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.2",
+    "css-loader": "^0.18.0",
+    "eslint": "^1.4.3",
+    "html-webpack-plugin": "^1.6.1",
+    "style-loader": "^0.12.4",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.11.0"
+  },
+  "peerDependencies": {
+    "react": "^0.13.3"
   }
 }
