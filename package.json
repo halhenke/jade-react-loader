@@ -1,6 +1,6 @@
 {
   "name": "jade-react-loader",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Loader for Webpack, transforming Jade templates to React Javascript functions",
   "main": "dist/index.js",
   "scripts": {
