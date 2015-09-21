@@ -2,12 +2,12 @@
   "name": "jade-react-loader",
   "version": "0.1.2",
   "description": "Loader for Webpack, transforming Jade templates to React Javascript functions",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "npm run lint -s && npm run clean -s",
     "build": "npm run prebuild && babel --optional runtime index.js -d dist",
-    "lint": "eslint .",
+    "lint": "eslint index.js",
     "prepublish": "npm run build",
     "start": "NODE_ENV=development webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,14 +33,10 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-eslint": "^4.1.2",
-    "css-loader": "^0.18.0",
-    "eslint": "^1.4.3",
-    "html-webpack-plugin": "^1.6.1",
-    "style-loader": "^0.12.4",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.11.0"
+    "eslint": "^1.4.3"
   },
   "peerDependencies": {
+    "webpack": "^1.12.2",
     "react": "^0.13.3"
   }
 }
