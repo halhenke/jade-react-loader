@@ -1,5 +1,8 @@
 # Jade to React JS loader for Webpack
 
+## PreRequisites
+- [React](https://github.com/facebook/react) & [Webpack](https://github.com/webpack/webpack) are peerDependencies (will be installed automatically with npm 2 but left to end-user under npm 3)
+
 ## Usage
 
 Like any loader can be set up in a configuration file but to use in a require statement:
@@ -14,7 +17,8 @@ var JadeComponent = React.createClass({
 });
 ```
 
-- you will need React loaded in the browser
+### Passing Arguments to templates
+
 - If `locals` is an object specifying the components props you can then render the template on the page like so:
 
 ```javascript
@@ -34,9 +38,49 @@ var JadeComponent = React.createClass({
 });
 ```
 
+- OR by passing arguments directly to the template function
+- For example if you are using the `css-loader` (and `style-loader`) to create modular CSS packages 
+    + typical webpack config:
+```javascript
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loader: 'style!css?modules&localIdentName=[name]__[local]___[hash:base64:5]'
+      }
+    ]
+  }
+```
+
+- then you could pass these styles to your jade template like so:
+
+```javascript
+var React = require("react");
+var styles = require('./template.css');
+
+var template = require("jade-react!./react/components/template.jade");
+
+var JadeComponent = React.createClass({
+    render: function () {
+        return template({styles: styles})
+    }
+});
+```
+
+- where they could be referenced as class names:
+
+```jade
+section(className=styles.content)
+  h1 Hey There!
+```
+
 ## More Info
 
-- Uses the [react-jade](https://github.com/jadejs/react-jade) package and Jade templates are subject to the same limitations as listed there.
-- Nothing fancy at present
-    + no async
-    + no queries
+- A simple example app (using ES6 syntax) can be seen at [jade-react-loader-example](https://github.com/halhenke/jade-react-loader-example)
+
+- Loader uses the [react-jade](https://github.com/jadejs/react-jade) package and Jade templates are subject to the same limitations as listed there.
+
+
+## Acknowledgements
+
+- Thanks to [kilokeith](https://github.com/kilokeith) for valuable contributions
