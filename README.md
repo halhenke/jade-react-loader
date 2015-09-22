@@ -1,5 +1,8 @@
 # Jade to React JS loader for Webpack
 
+[![npm package][npm-ver-link]][releases]
+[![][dl-badge]][npm-pkg-link]
+
 ## PreRequisites
 - [React](https://github.com/facebook/react) & [Webpack](https://github.com/webpack/webpack) are peerDependencies (will be installed automatically with npm 2 but left to end-user under npm 3)
 
@@ -84,3 +87,8 @@ section(className=styles.content)
 ## Acknowledgements
 
 - Thanks to [kilokeith](https://github.com/kilokeith) for valuable contributions
+
+[npm-pkg-link]: https://www.npmjs.com/package/jade-react-loader
+[releases]:     https://github.com/sugarshin/fly-jade/releases
+[npm-ver-link]: https://img.shields.io/npm/v/jade-react-loader.svg?style=flat-square
+[dl-badge]:     http://img.shields.io/npm/dm/jade-react-loader.svg?style=flat-square
