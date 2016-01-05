@@ -28,15 +28,11 @@
   "license": "MIT",
   "dependencies": {
     "loader-utils": "^0.2.9",
-    "react-jade": "^2.4.0"
+    "react-jade": "2.x.x"
   },
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-eslint": "^4.1.2",
     "eslint": "^1.4.3"
-  },
-  "peerDependencies": {
-    "webpack": "^1.12.2",
-    "react": "^0.13.3"
   }
 }
