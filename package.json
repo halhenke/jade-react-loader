@@ -38,6 +38,6 @@
   },
   "peerDependencies": {
     "webpack": "^1.12.2",
-    "react": "^0.13.3"
+    "react": "0"
   }
 }
