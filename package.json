@@ -8,9 +8,7 @@
     "prebuild": "npm run lint -s && npm run clean -s",
     "build": "npm run prebuild && babel --optional runtime index.js -d dist",
     "lint": "eslint index.js",
-    "prepublish": "npm run build",
-    "start": "NODE_ENV=development webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build"
   },
   "keywords": [
     "webpack",
